@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 using Zenject;
 
 public class PlayerMovement : MonoBehaviour
@@ -20,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(isInputHold);
         if (isInputHold)
         {
             MoveToSide();
@@ -48,12 +46,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void MoveToSide()
     {
-        Vector3 mousePosition = Mouse.current.position.ReadValue();
-        if(mousePosition.x > Screen.width / 2)
+        Vector3 touchPosition = Touchscreen.current.position.ReadValue();
+        if(touchPosition.x > Screen.width / 2)
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
         }
-        else if(mousePosition.x < Screen.width / 2)
+        else if(touchPosition.x < Screen.width / 2)
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
         }
