@@ -6,8 +6,12 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed;
+    [SerializeField] private float jumpForce;
+
+    private CircleCollider2D playerCollier;
 
     private bool isInputHold;
+    private bool isOnGround;
 
     private IInputHandler inputHandler;
 
@@ -15,6 +19,29 @@ public class PlayerMovement : MonoBehaviour
     private void Construct(IInputHandler inputHandler)
     {
         this.inputHandler = inputHandler;
+    }
+
+    private void Start()
+    {
+        playerCollier = GetComponent<CircleCollider2D>();
+    }
+
+    private void Update()
+    {
+        CheckGround();
+        DoJump();
+    }
+
+    private void DoJump()
+    {
+        if (isOnGround)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
+        else if (!isOnGround)
+        {
+            rb.velocity += new Vector2(0, Physics2D.gravity.y * Time.deltaTime);
+        }
     }
 
     private void FixedUpdate()
@@ -54,6 +81,20 @@ public class PlayerMovement : MonoBehaviour
         else if(touchPosition.x < Screen.width / 2)
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
+        }
+    }
+
+    private void CheckGround()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(0, transform.position.y - playerCollier.radius), -Vector2.up, 0.01f);
+
+        if (hit == true)
+        {
+            isOnGround = true;
+        } 
+        else 
+        { 
+            isOnGround = false; 
         }
     }
 }
