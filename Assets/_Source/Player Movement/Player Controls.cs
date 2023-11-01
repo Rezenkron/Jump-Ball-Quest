@@ -40,17 +40,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""5cbdc438-748c-4243-9d3d-9ab93c980b62"",
-                    ""path"": ""<Mouse>/press"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Mouse"",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""1b815362-ca0b-4e11-b086-2e0b78799ec7"",
                     ""path"": ""<Pointer>/press"",
                     ""interactions"": """",
@@ -64,17 +53,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         }
     ],
     ""controlSchemes"": [
-        {
-            ""name"": ""Mouse"",
-            ""bindingGroup"": ""Mouse"",
-            ""devices"": [
-                {
-                    ""devicePath"": ""<Mouse>"",
-                    ""isOptional"": true,
-                    ""isOR"": false
-                }
-            ]
-        },
         {
             ""name"": ""Touch"",
             ""bindingGroup"": ""Touch"",
@@ -194,15 +172,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         }
     }
     public MainActions @Main => new MainActions(this);
-    private int m_MouseSchemeIndex = -1;
-    public InputControlScheme MouseScheme
-    {
-        get
-        {
-            if (m_MouseSchemeIndex == -1) m_MouseSchemeIndex = asset.FindControlSchemeIndex("Mouse");
-            return asset.controlSchemes[m_MouseSchemeIndex];
-        }
-    }
     private int m_TouchSchemeIndex = -1;
     public InputControlScheme TouchScheme
     {
