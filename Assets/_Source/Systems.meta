@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Source/Systems.meta
 guid: 9f50865635025fb42878d3412c3d9656
+========
+guid: 13b5a9a0a4195124b8a4eca4cf886051
+>>>>>>>> _Level's:Assets/_Presentation/_Level's/_Assets.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
