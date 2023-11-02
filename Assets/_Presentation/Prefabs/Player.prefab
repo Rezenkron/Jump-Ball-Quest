@@ -297,8 +297,8 @@ MonoBehaviour:
   jumpForce: 10
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
-  groundCollider: {fileID: 0}
+    m_Bits: 256
+  groundCollider: {fileID: 2295866650122728504}
 --- !u!1 &5924326995713845756
 GameObject:
   m_ObjectHideFlags: 0
