@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 25437549}
   - component: {fileID: 25437548}
   - component: {fileID: 25437547}
+  - component: {fileID: 25437550}
   m_Layer: 0
   m_Name: Lisun
   m_TagString: Untagged
@@ -229,6 +230,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &25437550
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25437546}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.9, y: 1.3}
+    newSize: {x: 1.9, y: 1.3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9, y: 1.3}
+  m_EdgeRadius: 0
 --- !u!1 &37274882
 GameObject:
   m_ObjectHideFlags: 0
@@ -9192,6 +9219,7 @@ GameObject:
   - component: {fileID: 1599401102}
   - component: {fileID: 1599401101}
   - component: {fileID: 1599401100}
+  - component: {fileID: 1599401103}
   m_Layer: 0
   m_Name: Lisun (1)
   m_TagString: Untagged
@@ -9287,6 +9315,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 179.25, z: 0}
+--- !u!61 &1599401103
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599401099}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.9, y: 1.3}
+    newSize: {x: 1.9, y: 1.3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9, y: 1.3}
+  m_EdgeRadius: 0
 --- !u!1001 &1610021790
 PrefabInstance:
   m_ObjectHideFlags: 0
