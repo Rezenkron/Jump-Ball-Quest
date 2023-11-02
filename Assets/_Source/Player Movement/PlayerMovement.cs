@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Zenject;
@@ -7,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private Collider2D groundCollider;
 
     private CircleCollider2D playerCollier;
 
@@ -38,10 +41,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-        else if (!isOnGround)
-        {
-            rb.velocity += new Vector2(0, Physics2D.gravity.y * Time.deltaTime);
-        }
     }
 
     private void FixedUpdate()
@@ -52,9 +51,10 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            rb.velocity = new Vector2(0, rb.velocity.y);
+            StopMoving();
         }
     }
+
 
     private void OnEnable()
     {
@@ -74,27 +74,34 @@ public class PlayerMovement : MonoBehaviour
     private void MoveToSide()
     {
         Vector3 touchPosition = Touchscreen.current.position.ReadValue();
-        if(touchPosition.x > Screen.width / 2)
+        if (touchPosition.x > Screen.width / 2)
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
         }
-        else if(touchPosition.x < Screen.width / 2)
+        else if (touchPosition.x < Screen.width / 2)
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
         }
     }
 
+    private void StopMoving()
+    {
+        rb.velocity = new Vector2(0, rb.velocity.y);
+    }
+
     private void CheckGround()
     {
-        RaycastHit2D hit = Physics2D.Raycast(new Vector2(0, transform.position.y - playerCollier.radius), -Vector2.up, 0.01f);
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - playerCollier.radius), -Vector2.up, 0.001f, groundLayer);
 
         if (hit == true)
         {
             isOnGround = true;
+            groundCollider.enabled = true;
         } 
-        else 
+        else if(hit == false)
         { 
-            isOnGround = false; 
+            isOnGround = false;
+            groundCollider.enabled = false;
         }
     }
 }
