@@ -1,7 +1,7 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Zenject;
+using Service;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,9 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Collider2D groundCollider;
 
-    private CircleCollider2D playerCollier;
 
     private bool isInputHold;
     private bool isOnGround;
@@ -24,27 +22,19 @@ public class PlayerMovement : MonoBehaviour
         this.inputHandler = inputHandler;
     }
 
-    private void Start()
-    {
-        playerCollier = GetComponent<CircleCollider2D>();
-    }
-
-    private void Update()
-    {
-        CheckGround();
-        DoJump();
-    }
-
     private void DoJump()
     {
         if (isOnGround)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.velocity = new Vector2(transform.position.x, jumpForce);
+            isOnGround = false;
         }
     }
 
     private void FixedUpdate()
-    {
+    { 
+        DoJump();
+
         if (isInputHold)
         {
             MoveToSide();
@@ -88,20 +78,20 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(0, rb.velocity.y);
     }
-
-    private void CheckGround()
+    
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - playerCollier.radius), -Vector2.up, 0.001f, groundLayer);
-
-        if (hit == true)
+        if (LayerChecker.CheckLayersEquality(collision.gameObject.layer, groundLayer))
         {
             isOnGround = true;
-            groundCollider.enabled = true;
-        } 
-        else if(hit == false)
-        { 
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (LayerChecker.CheckLayersEquality(collision.gameObject.layer, groundLayer))
+        {
             isOnGround = false;
-            groundCollider.enabled = false;
         }
     }
 }
