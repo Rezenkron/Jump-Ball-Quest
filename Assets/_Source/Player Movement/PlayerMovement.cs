@@ -81,7 +81,9 @@ public class PlayerMovement : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (LayerChecker.CheckLayersEquality(collision.gameObject.layer, groundLayer))
+        RaycastHit2D hit;
+        hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - 0.5f), Vector2.down, 1f, groundLayer);
+        if(hit == true)
         {
             isOnGround = true;
         }
