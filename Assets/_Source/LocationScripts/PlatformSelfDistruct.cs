@@ -17,7 +17,7 @@ namespace LvlScripts
             {
                 if(_tuchesToDistruct<= 0)
                 {
-                    Destroy(gameObject);
+                    Destroy(gameObject,0.1f);
                 }
                 _tuchesToDistruct--;
             }
