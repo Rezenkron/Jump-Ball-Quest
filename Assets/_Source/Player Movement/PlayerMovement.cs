@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isOnGround)
         {
-            rb.velocity = new Vector2(transform.position.x, jumpForce);
+            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             isOnGround = false;
         }
     }
