@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private Collider2D groundCollider;
 
     private CircleCollider2D playerCollier;
 
@@ -96,12 +95,10 @@ public class PlayerMovement : MonoBehaviour
         if (hit == true)
         {
             isOnGround = true;
-            groundCollider.enabled = true;
         } 
         else if(hit == false)
         { 
             isOnGround = false;
-            groundCollider.enabled = false;
         }
     }
 }
