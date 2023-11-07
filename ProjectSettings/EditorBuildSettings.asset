@@ -35,4 +35,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Presentation/_Level's/_Assets/Level's/Level.9.unity
     guid: 452270c0404ed59428c74bc7034530f5
+  - enabled: 1
+    path: Assets/_Presentation/_Level's/_Assets/Level's/Level.10.unity
+    guid: 1872b35c37aac6d409de7e16b5905faa
+  - enabled: 1
+    path: Assets/_Presentation/_Level's/_Assets/Level's/Level.11.unity
+    guid: 068d98aabc966754f97b90ffa9302ad5
+  - enabled: 1
+    path: Assets/_Presentation/_Level's/_Assets/Level's/Level.12.unity
+    guid: 2ec5638a19c51bd43bd83c5ff5ffd3ef
+  - enabled: 1
+    path: Assets/_Presentation/_Level's/_Assets/Level's/Level.13.unity
+    guid: 7f330f6ffb616cf4eb5ec4468366cabb
+  - enabled: 1
+    path: Assets/_Presentation/_Level's/_Assets/Level's/Level.14.unity
+    guid: cbedb35b178b6a147b119634458a49e8
+  - enabled: 1
+    path: Assets/_Presentation/_Level's/_Assets/Level's/Level.15.unity
+    guid: 886169310229d114299e8d3c9ba357b0
+  - enabled: 1
+    path: Assets/_Presentation/_Level's/_Assets/Level's/Settings.unity
+    guid: c9f9b94eeac0b184c8df3fca1385d6cf
+  - enabled: 1
+    path: Assets/_Presentation/_Level's/_Assets/Level's/Shop.unity
+    guid: d0e226ba169c8c04c97d8a863188ff11
   m_configObjects: {}
