@@ -127,4 +127,4 @@ MonoBehaviour:
   _playerLayer:
     serializedVersion: 2
     m_Bits: 8
-  _knockForce: 15
+  _knockForce: 10
