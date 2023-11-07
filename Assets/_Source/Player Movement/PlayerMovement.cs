@@ -1,7 +1,7 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Zenject;
+using Service;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private LayerMask groundLayer;
 
-    private CircleCollider2D playerCollier;
 
     private bool isInputHold;
     private bool isOnGround;
@@ -23,27 +22,19 @@ public class PlayerMovement : MonoBehaviour
         this.inputHandler = inputHandler;
     }
 
-    private void Start()
-    {
-        playerCollier = GetComponent<CircleCollider2D>();
-    }
-
-    private void Update()
-    {
-        CheckGround();
-        DoJump();
-    }
-
     private void DoJump()
     {
         if (isOnGround)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            isOnGround = false;
         }
     }
 
     private void FixedUpdate()
-    {
+    { 
+        DoJump();
+
         if (isInputHold)
         {
             MoveToSide();
@@ -87,17 +78,21 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(0, rb.velocity.y);
     }
-
-    private void CheckGround()
+    
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - playerCollier.radius), -Vector2.up, 0.001f, groundLayer);
-
-        if (hit == true)
+        RaycastHit2D hit;
+        hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - 0.5f), Vector2.down, 1f, groundLayer);
+        if(hit == true)
         {
             isOnGround = true;
-        } 
-        else if(hit == false)
-        { 
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (LayerChecker.CheckLayersEquality(collision.gameObject.layer, groundLayer))
+        {
             isOnGround = false;
         }
     }
