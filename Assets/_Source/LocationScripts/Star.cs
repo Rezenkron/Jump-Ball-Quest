@@ -8,9 +8,9 @@ public class Star : MonoBehaviour
 {
     [SerializeField] private LayerMask _playerLayer;
     private StarCollect _starCollect;
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (LayerChecker.CheckLayersEquality(collision.gameObject.layer, _playerLayer))
         {
             _starCollect = collision.gameObject.GetComponent<StarCollect>();
