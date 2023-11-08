@@ -4677,6 +4677,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5083561288032365466, guid: 0184c0a7074e8bc4db72d069ca0aabf5, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5083561289106345991, guid: 0184c0a7074e8bc4db72d069ca0aabf5, type: 3}
       propertyPath: jumpForce
       value: 8
@@ -4974,6 +4978,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 443da98aa5e02a54191796be6f20c095, type: 3}
+--- !u!1001 &1693098414
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 90008727046455198, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 90008727046455198, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.8307486
+      objectReference: {fileID: 0}
+    - target: {fileID: 90008727046455198, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.213089
+      objectReference: {fileID: 0}
+    - target: {fileID: 90008727046455198, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.80166286
+      objectReference: {fileID: 0}
+    - target: {fileID: 90008727046455198, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 90008727046455198, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 90008727046455198, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 90008727046455198, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 90008727046455198, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 90008727046455198, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 90008727046455198, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3569421440770520071, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
+      propertyPath: m_Name
+      value: Music Changer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
 --- !u!1 &1768488037
 GameObject:
   m_ObjectHideFlags: 0

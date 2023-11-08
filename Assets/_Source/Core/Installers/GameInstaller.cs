@@ -3,6 +3,7 @@ using Zenject;
 
 public class GameInstaller : MonoInstaller
 {
+    [SerializeField] private AudioSource sceneMusic;
     public override void InstallBindings()
     {
         BindInputHandler();
