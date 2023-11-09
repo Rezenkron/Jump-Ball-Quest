@@ -10,6 +10,7 @@ namespace LvlScripts
         [SerializeField] private LayerMask _playerLayer;
         [SerializeField] private int _tuchesToDistruct;
         [SerializeField] private float _tiltToDistruct;
+        [SerializeField] private AudioSource destructionSound;
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
@@ -17,6 +18,7 @@ namespace LvlScripts
             {
                 if(_tuchesToDistruct<= 0)
                 {
+                    destructionSound.Play();
                     Destroy(gameObject, _tiltToDistruct);
                 }
                 _tuchesToDistruct--;
