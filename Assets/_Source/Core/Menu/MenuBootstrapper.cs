@@ -7,7 +7,6 @@ public class MenuBootstrapper : MonoBehaviour
 {
     [SerializeField] private Button playButton;
     [SerializeField] private Button settingsButton;
-    [SerializeField] private Button shopButton;
 
     private MenuButtonsMethods menuButtons;
 
@@ -20,7 +19,6 @@ public class MenuBootstrapper : MonoBehaviour
     {
         menuButtons.Play(playButton);
         menuButtons.Settings(settingsButton);
-        menuButtons.Shop(shopButton);
     }
 
 }

@@ -12,5 +12,10 @@ public class MusicSystem : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
+
+        if (PlayerPrefs.HasKey(MusicVolumeAdjuster.VOLUME_PREFS_NAME))
+        {
+            GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat(MusicVolumeAdjuster.VOLUME_PREFS_NAME);
+        }
     }
 }
