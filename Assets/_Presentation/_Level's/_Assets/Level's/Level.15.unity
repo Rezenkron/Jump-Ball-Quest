@@ -687,6 +687,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 5083561289106345995, guid: 0184c0a7074e8bc4db72d069ca0aabf5, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0184c0a7074e8bc4db72d069ca0aabf5, type: 3}
 --- !u!1001 &299863133
@@ -19896,7 +19900,7 @@ MonoBehaviour:
   m_Follow: {fileID: 542584780}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 7.97
+    OrthographicSize: 5.8
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -20311,7 +20315,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.97
+  orthographic size: 5.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -20335,7 +20339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784430041}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.331313, y: -5.717476, z: 0}
+  m_LocalPosition: {x: 1.2944555, y: -5.1099896, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -85,8 +85,8 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         RaycastHit2D hit;
-        hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - 0.5f), Vector2.down, 1f, groundLayer);
-        if(hit == true)
+        hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - 0.5f), Vector2.down, 0.5f, groundLayer);
+        if (hit == true)
         {
             isOnGround = true;
         }
@@ -98,5 +98,10 @@ public class PlayerMovement : MonoBehaviour
         {
             isOnGround = false;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(new Vector2(transform.position.x, transform.position.y - 0.3f), 0.2f);
     }
 }
