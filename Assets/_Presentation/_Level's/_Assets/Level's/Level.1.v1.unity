@@ -5029,6 +5029,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2501568231383902544, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
+      propertyPath: musicClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 364565b298c03114fb6e02126b146343, type: 3}
     - target: {fileID: 3569421440770520071, guid: 143b61948a532cd4f80e6db1f82c7212, type: 3}
       propertyPath: m_Name
       value: Music Changer
