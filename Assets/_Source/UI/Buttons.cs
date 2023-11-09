@@ -2,8 +2,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Buttons : MonoBehaviour
 {
-    public void BackToMenuButton()
+    public void LoadSceneWithIndex(int index)
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(index);
     }
 }

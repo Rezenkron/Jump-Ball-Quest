@@ -8,7 +8,7 @@ public class MenuButtonsMethods
 {
     public void Play(Button playButton)
     {
-        playButton.onClick.AddListener(() => SceneManager.LoadScene(1));
+        playButton.onClick.AddListener(() => SceneManager.LoadScene(17));
     }
     
     public void Settings(Button settingsButton)
