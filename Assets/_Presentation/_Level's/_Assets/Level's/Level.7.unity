@@ -843,7 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BoundingShape2D: {fileID: 1541199551}
-  m_Damping: 0.5
+  m_Damping: 0.78
   m_MaxWindowSize: -1
 --- !u!114 &400889058
 MonoBehaviour:
@@ -32079,9 +32079,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 22.00397, y: 17.091846}
-      - {x: 22.080444, y: 31.505882}
-      - {x: -17.124014, y: 31.492805}
+    - - {x: 40.3, y: 17.091846}
+      - {x: 35.7, y: 31.505882}
+      - {x: -17.2, y: 31.492805}
       - {x: -17.148117, y: -9.718673}
       - {x: 47.944527, y: -9.718673}
       - {x: 47.920425, y: 17.063038}
@@ -32455,7 +32455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898770374}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.798786, y: 13.274949, z: -10.700094}
+  m_LocalPosition: {x: -16.477509, y: 13.273658, z: -10.700094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
