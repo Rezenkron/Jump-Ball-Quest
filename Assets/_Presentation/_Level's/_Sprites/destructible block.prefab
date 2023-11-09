@@ -102,6 +102,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   _tuchesToDistruct: 0
+  _tiltToDistruct: 0.1
 --- !u!61 &9165948878569519547
 BoxCollider2D:
   m_ObjectHideFlags: 0
