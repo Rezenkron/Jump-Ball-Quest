@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private LayerMask groundLayer;
 
+    [Header("Presentation")]
+    [SerializeField] private AudioSource jumpSound;
 
     private bool isInputHold;
     private bool isOnGround;
@@ -27,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         if (isOnGround)
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            jumpSound.Play();
             isOnGround = false;
         }
     }
