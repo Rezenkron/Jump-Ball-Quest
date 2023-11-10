@@ -474,6 +474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playButton: {fileID: 411934532}
   settingsButton: {fileID: 1273528239}
+  clearAllPrefs: 0
 --- !u!4 &609393633
 Transform:
   m_ObjectHideFlags: 0

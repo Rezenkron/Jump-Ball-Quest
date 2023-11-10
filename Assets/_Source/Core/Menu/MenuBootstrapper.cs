@@ -7,6 +7,7 @@ public class MenuBootstrapper : MonoBehaviour
 {
     [SerializeField] private Button playButton;
     [SerializeField] private Button settingsButton;
+    [SerializeField] bool clearAllPrefs = false;
 
     private MenuButtonsMethods menuButtons;
 
@@ -19,6 +20,11 @@ public class MenuBootstrapper : MonoBehaviour
     {
         menuButtons.Play(playButton);
         menuButtons.Settings(settingsButton);
+
+        if(clearAllPrefs)
+        {
+            PlayerPrefs.DeleteAll();
+        }
     }
 
 }

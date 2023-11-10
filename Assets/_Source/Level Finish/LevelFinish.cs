@@ -11,7 +11,14 @@ public class LevelFinish : MonoBehaviour
         if ((playerLayer.value & (1 << collision.gameObject.layer)) > 0)
         {
             SceneManager.LoadScene(nextSceneIndex);
-            CompletedLevelsData.isCompleted[nextSceneIndex - 1] = true;
+            if (nextSceneIndex != 0)
+            {
+                CompletedLevelsData.isCompleted[SceneManager.GetActiveScene().buildIndex - 1] = true;
+                for (int i = 0; i < nextSceneIndex; i++)
+                {
+                    PlayerPrefs.SetInt("Level" + i, 1);
+                }
+            }
         }
     }
 }
