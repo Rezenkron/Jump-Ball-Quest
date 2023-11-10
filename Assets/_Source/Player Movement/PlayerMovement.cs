@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
         if (isOnGround)
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            jumpSound.Play();
             isOnGround = false;
         }
     }
@@ -84,9 +83,12 @@ public class PlayerMovement : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        RaycastHit2D hit;
-        hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - 0.5f), Vector2.down, 0.5f, groundLayer);
-        if (hit == true)
+
+        jumpSound.Play();
+        RaycastHit2D hitCenter = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y - 0.5f), Vector2.down, 0.5f, groundLayer);
+        RaycastHit2D hitLeft = Physics2D.Raycast(new Vector2(transform.position.x - 0.24f, transform.position.y - 0.5f), Vector2.down, 0.5f, groundLayer);
+        RaycastHit2D hitRight = Physics2D.Raycast(new Vector2(transform.position.x + 0.24f, transform.position.y - 0.5f), Vector2.down, 0.5f, groundLayer);
+        if (hitCenter || hitLeft || hitRight)
         {
             isOnGround = true;
         }
